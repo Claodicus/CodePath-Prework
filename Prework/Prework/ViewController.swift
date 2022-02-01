@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     var tip = 0.15
+    var currency = "$"
     
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipAmountLabel: UILabel!
@@ -22,13 +23,25 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    @IBAction func changeTipSlider(_ sender: Any) {
-        tip = Double(tipSlider.value)
+    
+    // activatge when text field is edited
+    @IBAction func editTextField(_ sender: Any) {
+        tipAmountLabel.text = "\(currency)0.00"
+        totalLabel.text = "\(currency)0.00"
         displayTipPercentage()
         calculateTip()
     }
     
+    
+    // activate when tip slider is changed
+    @IBAction func changeTipSlider(_ sender: Any) {
+        tip = Double(Int(tipSlider.value*100.0))/100.0
+        displayTipPercentage()
+        calculateTip()
+    }
+    
+    
+    // activate when tip controller is changed
     @IBAction func changeTipController(_ sender: Any) {
         let tipPercentages = [0.15, 0.18, 0.2]
         tip = tipPercentages[tipControl.selectedSegmentIndex]
@@ -37,6 +50,7 @@ class ViewController: UIViewController {
     }
     
     
+    // displays the tip percentage
     func displayTipPercentage() {
         // Obtain tip percentage
         let tipPercent = tip
@@ -45,6 +59,8 @@ class ViewController: UIViewController {
         tipPercentageLabel.text = String(format: "%0.2f%%", (tipPercent*100))
     }
     
+    
+    // calculate the tip from available data
     func calculateTip() {
         // Get bill from input field
         let bill = Double(billAmountTextField.text!) ?? 0
@@ -55,9 +71,9 @@ class ViewController: UIViewController {
         let total = bill + tip
         
         // Update tip label
-        tipAmountLabel.text = String(format: "$%.2f", tip)
+        tipAmountLabel.text = String(format: "\(currency)%.2f", tip)
         // Update total label
-        totalLabel.text = String(format: "$%.2f", total)
+        totalLabel.text = String(format: "\(currency)%.2f", total)
     }
     
 }
