@@ -16,6 +16,7 @@
 		0B0492A027A4B284000AA211 /* PreworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B04929F27A4B284000AA211 /* PreworkTests.swift */; };
 		0B0492AA27A4B284000AA211 /* PreworkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0492A927A4B284000AA211 /* PreworkUITests.swift */; };
 		0B0492AC27A4B284000AA211 /* PreworkUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0492AB27A4B284000AA211 /* PreworkUITestsLaunchTests.swift */; };
+		0B99201F27A9E1CA002B99E0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B99201E27A9E1CA002B99E0 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		0B0492A527A4B284000AA211 /* PreworkUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PreworkUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0492A927A4B284000AA211 /* PreworkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreworkUITests.swift; sourceTree = "<group>"; };
 		0B0492AB27A4B284000AA211 /* PreworkUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreworkUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		0B99201E27A9E1CA002B99E0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,9 @@
 		0B04928727A4B281000AA211 /* Prework */ = {
 			isa = PBXGroup;
 			children = (
+				0B99202027A9E1D2002B99E0 /* View Controllers */,
 				0B04928827A4B281000AA211 /* AppDelegate.swift */,
 				0B04928A27A4B281000AA211 /* SceneDelegate.swift */,
-				0B04928C27A4B281000AA211 /* ViewController.swift */,
 				0B04928E27A4B281000AA211 /* Main.storyboard */,
 				0B04929127A4B284000AA211 /* Assets.xcassets */,
 				0B04929327A4B284000AA211 /* LaunchScreen.storyboard */,
@@ -125,6 +127,15 @@
 				0B0492AB27A4B284000AA211 /* PreworkUITestsLaunchTests.swift */,
 			);
 			path = PreworkUITests;
+			sourceTree = "<group>";
+		};
+		0B99202027A9E1D2002B99E0 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0B04928C27A4B281000AA211 /* ViewController.swift */,
+				0B99201E27A9E1CA002B99E0 /* SettingsViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 				0B04928D27A4B281000AA211 /* ViewController.swift in Sources */,
 				0B04928927A4B281000AA211 /* AppDelegate.swift in Sources */,
 				0B04928B27A4B281000AA211 /* SceneDelegate.swift in Sources */,
+				0B99201F27A9E1CA002B99E0 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
