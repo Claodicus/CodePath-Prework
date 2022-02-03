@@ -4,7 +4,7 @@
 
 Submitted by: **Patrick Brothers**
 
-Time spent: **5** hours spent in total
+Time spent: **8** hours spent in total
 
 ## User Stories
 
@@ -15,7 +15,7 @@ The following **required** functionality is complete:
 
 The following **optional** features are implemented:
 
-* [ ] UI animations
+* [X] UI animations
 * [ ] Remembering the bill amount across app restarts (if <10mins)
 * [ ] Using locale-specific currency and currency thousands separators.
 * [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
@@ -23,12 +23,14 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - [X] Added a slider for tip percentage that works in addition to the controller
+- [X] Added the option to choose any currency value
+- [X] Added changeable defaults for segmented control
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://recordit.co/3LfoCsufLA.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/Claodicus/CodePath-Prework/blob/main/Prework/Prework/app-demo.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## Notes
