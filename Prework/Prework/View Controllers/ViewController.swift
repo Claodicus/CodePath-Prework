@@ -25,10 +25,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { _ in
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { [self] _ in
             self.tipControl.setTitle("\(self.defaultOne==0 ? 15:self.defaultOne)%", forSegmentAt: 0)
             self.tipControl.setTitle("\(self.defaultTwo==0 ? 18:self.defaultTwo)%", forSegmentAt: 1)
             self.tipControl.setTitle("\(self.defaultThree==0 ? 20:self.defaultThree)%", forSegmentAt: 2)
+            self.displayTipPercentage()
+            self.calculateTip()
         })
 
     }
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
         let tipPercent = tip
         
         // Obtain Tip Percentage label
-        tipPercentageLabel.text = String(format: "%0.2f%%", (tipPercent*100))
+        tipPercentageLabel.text = String(Int(tipPercent*100)) + "%"
     }
     
     
